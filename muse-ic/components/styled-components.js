@@ -26,7 +26,7 @@ export const TextPop16px500Blue = styled(TextPop16px500Grey)`
 `;
 
 export const TextPop16px500White = styled(TextPop16px500Grey)`
-  color: #ffffff;
+  color: #fff;
 `;
 
 export const TextPop28px600Dark = styled(TextPop16px500Grey)`
@@ -43,10 +43,24 @@ export const ButtonPop16px500GreyU = styled.a`
   font-weight: 500;
   color: #999fae;
   cursor: pointer;
+  border-bottom: 2px solid white;
   &:hover{
       border-bottom: 2px solid #999fae
   };
 `;
+
+export const ButtonPop16px500BlueBR = styled(ButtonPop16px500GreyU)`
+    color: #2522ba;
+    border: none;
+    padding: 28px 66px;
+    background: #fff;
+    border-radius: 20px;
+    &:hover{
+        border: none;
+        background: #E6E5FF;
+    };
+`
+
 
 // IMAGES
 

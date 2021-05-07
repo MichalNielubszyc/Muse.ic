@@ -4,12 +4,13 @@ import {
     TextPop28px600Dark,
   } from "../styled-components";
 
-const LogoContainer = styled.div`
+const LogoContainer = styled.a`
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 29px;
   gap: 13px;
+  cursor: pointer;
 `;
 
 export const Logo = () => {
