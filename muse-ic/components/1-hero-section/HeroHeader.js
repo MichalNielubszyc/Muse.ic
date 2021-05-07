@@ -30,6 +30,18 @@ const TextContainer = styled.div`
     gap: 35px
 `;
 
+const ImageRelativePlus = styled.div`
+  z-index: 10;
+  position: relative;
+`;
+
+const ImageAbsolutePlus = styled.div`
+  z-index: -5;
+  position: absolute;
+  top: 43px;
+  left: 43px;
+`;
+
 export const HeroHeader = () => {
   return (
     <HeroContainer>
@@ -44,10 +56,10 @@ export const HeroHeader = () => {
             <Image src="/play.jpg" alt="play" width={16} height={16} />
             <ButtonPop16px500GreyU style={{marginLeft: "16px"}} >See it in action!</ButtonPop16px500GreyU>
         </FlexRowContainer>
-        <Image src="/scroll2.png" alt="scroll" width={18} height={18} />
+        <Image src="/scroll3.jpg" alt="scroll" width={18} height={18} />
         <TextPop16px400Grey>Scroll to explore</TextPop16px400Grey>
       </TextContainer>
-      <Image src="/Hero image.png" alt="pink circle" width={690} height={769} />
+      <ImageRelativePlus><Image src="/Hero image.png" alt="pink circle" width={690} height={769} /><ImageAbsolutePlus><Image src="/Circle 7.png" alt="yellow circle" width={128} height={128} /></ImageAbsolutePlus></ImageRelativePlus>
     </HeroContainer>
   );
 };

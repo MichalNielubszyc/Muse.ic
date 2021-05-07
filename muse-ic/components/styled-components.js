@@ -3,10 +3,12 @@ import styled from "styled-components";
 // CONTAINERS
 
 export const SectionContainer = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   @import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins&display=swap");
   max-width: 1440px;
   margin: 0 auto;
+  position: relative;
+  background: #FFF;
 `;
 
 export const SectionContent = styled.div`
@@ -81,6 +83,7 @@ export const ButtonPop16px500BlueBR = styled.a`
   border-radius: 20px;
   box-shadow: none;
   border: none;
+  z-index: 10;
   &:hover {
     background: #e6e5ff;
   }
