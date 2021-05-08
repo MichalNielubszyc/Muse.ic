@@ -3,14 +3,22 @@ import { createGlobalStyle } from "styled-components";
 import { HeroSection } from "../components/1-hero-section/HeroSection";
 import { SignUpSection } from "../components/3-sing-up-section/SingUpSection";
 
-export const getStaticProps = async () => {
-  const response = await fetch("https://itunes.apple.com/search?term=arctic+monkeys&entity=album&limit=7") ?? null;
-  const data = response.json();
+// export const getStaticProps = async () => {
+//   const response = await fetch("https://itunes.apple.com/search?term=arctic+monkeys&entity=album&limit=7") ?? null;
+//   const data = response.json();
 
-  return {
-    props: { fetchedAlbums: data ?? null }
-  }
-  console.log(response)
+//   return {
+//     props: { fetchedAlbums: data ?? null }
+//   }
+//   console.log(fetchedAlbums)
+// }
+
+export async function getStaticProps() {
+  const url = `https://itunes.apple.com/search?term=arctic+monkeys&entity=album&limit=7`
+  const result = await fetch(url)
+  return { props: {
+    fetchedAlbums: await result.json()
+  }}
 }
 
 const GlobalStyle = createGlobalStyle`
@@ -25,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
 export default function Home({ fetchedAlbums }) {
   return (
     <>
-    {/* {console.log(fetchedAlbums)} */}
+    {console.log(fetchedAlbums)}
       <GlobalStyle />
       <Head>
         <title>Muse.ic</title>
