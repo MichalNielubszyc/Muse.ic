@@ -30,16 +30,18 @@ export const CarouselSection = (albums) => {
 
   const [counter, setCounter] = useState(0);
 
+  const extendedAlbumsArr = [albums.albums.results[5], albums.albums.results[6], ...albums.albums.results, albums.albums.results[0], albums.albums.results[1]]
+
   const getAlbumCover1000px = (url) => {
     return url.slice(0, -13) + "1000x1000bb.jpg";
   }
 
   const moveAlbumsLeft = () => {
-    setCounter(counter-1);
+    setCounter(counter+1);
   }
 
   const moveAlbumsRight = () => {
-    setCounter(counter+1);
+    setCounter(counter-1);
   }
 
   return (
@@ -60,7 +62,7 @@ export const CarouselSection = (albums) => {
         <CarouselContainer>
           <ArrowNumbersContainer>
             <Numbers>
-              <TextSans14px500White>01</TextSans14px500White>
+              <TextSans14px500White>{`0${counter + 1}`}</TextSans14px500White>
               <HorLine />
               <TextSans14px500Grey>07</TextSans14px500Grey>
             </Numbers>
@@ -86,9 +88,9 @@ export const CarouselSection = (albums) => {
             </Arrows>
           </ArrowNumbersContainer>
           <AlbumsCarousel>
-            {albums.albums.results.map((album, index) => {
+            {extendedAlbumsArr.map((album, index) => {
               return (
-              <SingleAlbumContainer key={index} style={{transform: `translateX(${counter*450}px)`}}>
+              <SingleAlbumContainer key={index} style={{transform: `translateX(${counter*(-450)}px)`}}>
               <AlbumCover><Image
               src={getAlbumCover1000px(album.artworkUrl100)}
               alt={`album-${index}`}
