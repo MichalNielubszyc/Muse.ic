@@ -37,6 +37,10 @@ export const TextPop18px400Grey = styled(TextPop16px500Grey)`
   font-weight: 400;
 `;
 
+export const TextPop18px400GreyW450px = styled(TextPop18px400Grey)`
+  width: 480px;
+`;
+
 export const TextPop16px500Blue = styled(TextPop16px500Grey)`
   color: #2522ba;
 `;
@@ -84,10 +88,27 @@ export const TextSans24px500White = styled(TextSans24px500Grey)`
   color: #fff;
 `;
 
-export const TextSans20px500White = styled(TextSans24px500Grey)`color: #FFF;
-font-size: 20px;
-font-weight: 700;
-line-height: 20px;
+export const TextSans14px500White = styled(TextSans24px500White)`
+  font-size: 14px;
+`;
+
+export const TextSans14px500Grey = styled(TextSans14px500White)`
+  color: #999fae;
+`;
+
+export const TextSans20px500White = styled(TextSans24px500Grey)`
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  width: 154px;
+`;
+
+export const TextSans80px500White = styled(TextSans64px500White)`
+  font-size: 80px;
+  line-height: 80px;
+  margin: 0;
+  padding: 0;
 `;
 
 // BUTTONS
@@ -145,4 +166,15 @@ export const ButtonPop16px500WhiteBlueBR340pxW = styled(
   padding: 28px 0;
   display: flex;
   justify-content: center;
+`;
+
+// OTHER
+
+export const HorLine = styled.div`
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid;
+  width: 40px;
+  align-self: center;
+  color: #FFF
 `;

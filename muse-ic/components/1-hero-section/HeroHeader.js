@@ -56,7 +56,14 @@ export const HeroHeader = () => {
             <Image src="/play.jpg" alt="play" width={16} height={16} />
             <ButtonPop16px500GreyU style={{marginLeft: "16px"}} >See it in action!</ButtonPop16px500GreyU>
         </FlexRowContainer>
-        <Image src="/scroll3.jpg" alt="scroll" width={18} height={18} />
+        <ImageAbsolutePlus>
+        <Image
+              src="/arrowright.jpg"
+              alt="arowright"
+              width={16}
+              height={16}
+            />
+        </ImageAbsolutePlus>
         <TextPop16px400Grey>Scroll to explore</TextPop16px400Grey>
       </TextContainer>
       <ImageRelativePlus><Image src="/Hero image.png" alt="pink circle" width={690} height={769} /><ImageAbsolutePlus><Image src="/Circle 7.png" alt="yellow circle" width={128} height={128} /></ImageAbsolutePlus></ImageRelativePlus>
