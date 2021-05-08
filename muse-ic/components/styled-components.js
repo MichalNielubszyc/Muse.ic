@@ -8,7 +8,7 @@ export const SectionContainer = styled.div`
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
-  background: #FFF;
+  background: #fff;
 `;
 
 export const SectionContent = styled.div`
@@ -58,6 +58,28 @@ export const TextSans96px700 = styled.h1`
   margin: 110px 0 0;
 `;
 
+export const TextSans64px500Dark = styled(TextSans96px700)`
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 64px;
+  margin: 0;
+`;
+
+export const TextSans64px500White = styled(TextSans64px500Dark)`
+  color: #fff;
+`;
+
+export const TextSans24px500Grey = styled(TextSans64px500Dark)`
+  color: #999fae;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+`;
+
+export const TextSans24px500White = styled(TextSans24px500Grey)`
+  color: #fff;
+`;
+
 // BUTTONS
 
 export const ButtonPop16px500GreyU = styled.a`
@@ -96,4 +118,21 @@ export const ButtonPop16px500WhiteBlueBR = styled(ButtonPop16px500BlueBR)`
   &:hover {
     background: #8886ff;
   }
+`;
+
+export const ButtonPop16px500BlueBR340pxW = styled(ButtonPop16px500BlueBR)`
+  width: 340px;
+  padding: 28px 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 10px 24px 3px rgba(0, 0, 0, 0.39);
+`;
+
+export const ButtonPop16px500WhiteBlueBR340pxW = styled(
+  ButtonPop16px500WhiteBlueBR
+)`
+  width: 340px;
+  padding: 28px 0;
+  display: flex;
+  justify-content: center;
 `;

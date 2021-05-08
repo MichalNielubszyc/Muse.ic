@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { createGlobalStyle } from "styled-components";
 import { HeroSection } from "../components/1-hero-section/HeroSection";
+import { SignUpSection } from "../components/3-sing-up-section/SingUpSection";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -20,6 +21,7 @@ export default function Home() {
         <link key="1" rel="icon" href="/favicon.ico" />
       </Head>
       <HeroSection />
+      <SignUpSection />
     </>
   );
 }

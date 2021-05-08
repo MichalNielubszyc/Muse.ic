@@ -38,8 +38,8 @@ const ImageRelativePlus = styled.div`
 const ImageAbsolutePlus = styled.div`
   z-index: -5;
   position: absolute;
-  top: 43px;
-  left: 43px;
+  top: 70px;
+  left: 20px;
 `;
 
 export const HeroHeader = () => {
