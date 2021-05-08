@@ -1,4 +1,3 @@
-import { SectionContainer, SectionContent } from "../styled-components";
 import {
   TextSans20px500White,
   TextSans80px500White,
@@ -6,49 +5,18 @@ import {
   TextSans14px500White,
   TextSans14px500Grey,
   HorLine,
+  CarouselSectionContainer,
+  CarouselSectionContent,
+  HeadingContainer,
+  HeadingTextContainer,
+  CarouselContainer,
+  ArrowNumbersContainer,
+  Numbers,
+  Arrows,
+  SingleAlbumContainer,
+  AlbumCover
 } from "../styled-components";
 import Image from "next/image";
-import styled from "styled-components";
-
-const CarouselSectionContainer = styled(SectionContainer)`
-  background: #27272e;
-`;
-const CarouselSectionContent = styled(SectionContent)`
-  padding: 150px 0 130px 200px;
-  display: flex;
-  flex-direction: column;
-`;
-const HeadingContainer = styled.div`
-  display: flex;
-  margin: 0;
-  padding: 0;
-  gap: 114px;
-`;
-const HeadingTextContainer = styled(HeadingContainer)`
-  flex-direction: column;
-  gap: 48px;
-  width: 772px;
-  margin: 0;
-  padding: 0;
-`;
-const CarouselContainer = styled(HeadingContainer)`
-  gap: 100px;
-  height: 294px;
-  align-items: flex-end;
-`;
-const ArrowNumbersContainer = styled(HeadingContainer)`
-  height: 50%;
-  gap: 0;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-bottom: 50px;
-`;
-const Numbers = styled(HeadingContainer)`
-  gap: 30px;
-`;
-const Arrows = styled(HeadingContainer)`
-  gap: 17px;
-`;
 
 export const CarouselSection = (albums) => {
   const firstAlbumUrl100px = albums.albums.results[0].artworkUrl100;
@@ -93,6 +61,16 @@ export const CarouselSection = (albums) => {
               />
             </Arrows>
           </ArrowNumbersContainer>
+            <SingleAlbumContainer>
+                <AlbumCover><Image
+                src={firstAlbumUrl1000px}
+                alt="album"
+                width={242}
+                height={242}
+                className="album-cover"
+              /></AlbumCover>
+            </SingleAlbumContainer>
+
         </CarouselContainer>
       </CarouselSectionContent>
     </CarouselSectionContainer>

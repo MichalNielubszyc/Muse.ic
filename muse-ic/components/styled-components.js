@@ -178,3 +178,55 @@ export const HorLine = styled.div`
   align-self: center;
   color: #FFF
 `;
+
+// CAROUSEL SECTION
+
+export const CarouselSectionContainer = styled(SectionContainer)`
+  background: #27272e;
+`;
+export const CarouselSectionContent = styled(SectionContent)`
+  padding: 150px 0 130px 200px;
+  display: flex;
+  flex-direction: column;
+`;
+export const HeadingContainer = styled.div`
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 114px;
+`;
+export const HeadingTextContainer = styled(HeadingContainer)`
+  flex-direction: column;
+  gap: 48px;
+  width: 772px;
+  margin: 0;
+  padding: 0;
+`;
+export const CarouselContainer = styled(HeadingContainer)`
+  gap: 100px;
+  height: 294px;
+  align-items: flex-end;
+`;
+export const ArrowNumbersContainer = styled(HeadingContainer)`
+  height: 50%;
+  gap: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 50px;
+`;
+export const Numbers = styled(HeadingContainer)`
+  gap: 30px;
+`;
+export const Arrows = styled(HeadingContainer)`
+  gap: 17px;
+`;
+export const SingleAlbumContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+`
+export const AlbumCover = styled.div`
+  box-shadow: 0px 10px 24px 3px rgba(0, 0, 0, 0.39);
+  margin: 0; 
+  padding: 0
+`

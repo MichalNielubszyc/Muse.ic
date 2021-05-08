@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   background: #000;
   }
+  .album-cover { border-radius: 20px; }
 `;
 
 export default function Home({ fetchedAlbums }) {
