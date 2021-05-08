@@ -4,6 +4,10 @@ import {
   TextPop18px400GreyW450px,
   TextSans14px500White,
   TextSans14px500Grey,
+  TextSans24px500White,
+  TextSans24px500Red,
+  TextPop12px500WhiteUpper,
+  ButtonPop16px500BlueU,
   HorLine,
   CarouselSectionContainer,
   CarouselSectionContent,
@@ -14,7 +18,8 @@ import {
   Numbers,
   Arrows,
   SingleAlbumContainer,
-  AlbumCover
+  AlbumCover,
+  AlbumEssentials
 } from "../styled-components";
 import Image from "next/image";
 
@@ -69,8 +74,13 @@ export const CarouselSection = (albums) => {
                 height={242}
                 className="album-cover"
               /></AlbumCover>
+              <AlbumEssentials>
+                  <TextSans24px500White>{albums.albums.results[0].collectionName}</TextSans24px500White>
+                  <TextSans24px500Red>{albums.albums.results[0].artistName}</TextSans24px500Red>
+                  <TextPop12px500WhiteUpper>Alternative   •   {albums.albums.results[0].releaseDate.slice(0,4)}</TextPop12px500WhiteUpper>
+              </AlbumEssentials>
+              <ButtonPop16px500BlueU>Find out more</ButtonPop16px500BlueU>
             </SingleAlbumContainer>
-
         </CarouselContainer>
       </CarouselSectionContent>
     </CarouselSectionContainer>

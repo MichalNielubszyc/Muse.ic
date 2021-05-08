@@ -55,6 +55,11 @@ export const TextPop28px600Dark = styled(TextPop16px500Grey)`
   color: #292930;
 `;
 
+export const TextPop12px500WhiteUpper = styled(TextPop16px500White)`
+  font-size: 12px;
+  text-transform: uppercase;
+`;
+
 // DM SANS
 
 export const TextSans96px700 = styled.h1`
@@ -87,7 +92,9 @@ export const TextSans24px500Grey = styled(TextSans64px500Dark)`
 export const TextSans24px500White = styled(TextSans24px500Grey)`
   color: #fff;
 `;
-
+export const TextSans24px500Red = styled(TextSans24px500Grey)`
+  color: #e74252;
+`;
 export const TextSans14px500White = styled(TextSans24px500White)`
   font-size: 14px;
 `;
@@ -122,6 +129,15 @@ export const ButtonPop16px500GreyU = styled.a`
   border-bottom: 2px solid white;
   &:hover {
     border-bottom: 2px solid #999fae;
+  }
+`;
+
+export const ButtonPop16px500BlueU = styled(ButtonPop16px500GreyU)`
+  color: #5956E9;
+  border-bottom: 2px solid #27272E;
+  width: 112px;
+  &:hover {
+    border-bottom: 2px solid #5956E9;
   }
 `;
 
@@ -204,11 +220,11 @@ export const HeadingTextContainer = styled(HeadingContainer)`
 `;
 export const CarouselContainer = styled(HeadingContainer)`
   gap: 100px;
-  height: 294px;
+  height: 520px;
   align-items: flex-end;
 `;
 export const ArrowNumbersContainer = styled(HeadingContainer)`
-  height: 50%;
+  height: 28%;
   gap: 0;
   flex-direction: column;
   justify-content: space-between;
@@ -224,9 +240,15 @@ export const SingleAlbumContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 320px;
 `
 export const AlbumCover = styled.div`
-  box-shadow: 0px 10px 24px 3px rgba(0, 0, 0, 0.39);
+  box-shadow: 0px 15px 40px 22px rgba(0,0,0,0.54);
   margin: 0; 
-  padding: 0
+  padding: 0;
+  border-radius: 20px;
+  width: 242px;
+`
+export const AlbumEssentials = styled(SingleAlbumContainer)`
+  gap: 10px;
 `
