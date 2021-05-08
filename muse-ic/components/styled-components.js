@@ -199,6 +199,8 @@ export const HorLine = styled.div`
 
 export const CarouselSectionContainer = styled(SectionContainer)`
   background: #27272e;
+  position: relative;
+  overflow: hidden;
 `;
 export const CarouselSectionContent = styled(SectionContent)`
   padding: 150px 0 130px 200px;
@@ -219,7 +221,7 @@ export const HeadingTextContainer = styled(HeadingContainer)`
   padding: 0;
 `;
 export const CarouselContainer = styled(HeadingContainer)`
-  gap: 100px;
+  gap: 135px;
   height: 520px;
   align-items: flex-end;
 `;
@@ -229,6 +231,7 @@ export const ArrowNumbersContainer = styled(HeadingContainer)`
   flex-direction: column;
   justify-content: space-between;
   padding-bottom: 50px;
+  z-index: 10;
 `;
 export const Numbers = styled(HeadingContainer)`
   gap: 30px;
@@ -241,6 +244,8 @@ export const SingleAlbumContainer = styled.div`
     flex-direction: column;
     gap: 20px;
     width: 320px;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
 `
 export const AlbumCover = styled.div`
   box-shadow: 0px 15px 40px 22px rgba(0,0,0,0.54);
@@ -256,4 +261,12 @@ export const AlbumEssentials = styled(SingleAlbumContainer)`
 export const AlbumsCarousel = styled.div`
   display: flex;
   gap: 130px;
+`
+export const ButtonContainer = styled.button`
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  background: #27272E;
 `

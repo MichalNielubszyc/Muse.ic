@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
   TextSans20px500White,
   TextSans80px500White,
@@ -20,20 +21,29 @@ import {
   SingleAlbumContainer,
   AlbumCover,
   AlbumEssentials,
-  AlbumsCarousel
+  AlbumsCarousel,
+  ButtonContainer
 } from "../styled-components";
 import Image from "next/image";
 
 export const CarouselSection = (albums) => {
 
+  const [counter, setCounter] = useState(0);
+
   const getAlbumCover1000px = (url) => {
     return url.slice(0, -13) + "1000x1000bb.jpg";
   }
 
+  const moveAlbumsLeft = () => {
+    setCounter(counter-1);
+  }
+
+  const moveAlbumsRight = () => {
+    setCounter(counter+1);
+  }
+
   return (
     <CarouselSectionContainer>
-      {console.log(albums.albums.results)}
-      {/* <Image src={firstAlbumUrl1000px} alt="album" width={1000} height={1000} /> */}
       <CarouselSectionContent>
         <HeadingContainer>
           <TextSans20px500White>Top notch sound</TextSans20px500White>
@@ -55,24 +65,30 @@ export const CarouselSection = (albums) => {
               <TextSans14px500Grey>07</TextSans14px500Grey>
             </Numbers>
             <Arrows>
+              <ButtonContainer>
               <Image
                 src="/arrowleft.jpg"
                 alt="arowright"
                 width={40}
                 height={40}
+                onClick={moveAlbumsLeft}
               />
+              </ButtonContainer>
+              <ButtonContainer>
               <Image
                 src="/arrowright.jpg"
                 alt="arowright"
                 width={40}
                 height={40}
+                onClick={moveAlbumsRight}
               />
+              </ButtonContainer>
             </Arrows>
           </ArrowNumbersContainer>
           <AlbumsCarousel>
             {albums.albums.results.map((album, index) => {
               return (
-              <SingleAlbumContainer key={index}>
+              <SingleAlbumContainer key={index} style={{transform: `translateX(${counter*450}px)`}}>
               <AlbumCover><Image
               src={getAlbumCover1000px(album.artworkUrl100)}
               alt={`album-${index}`}
