@@ -17,6 +17,8 @@ export const SectionContent = styled.div`
 
 // TEXT COMPONENTS
 
+//POPPINS
+
 export const TextPop16px500Grey = styled.p`
   font-family: "Poppins", sans-serif;
   font-size: 16px;
@@ -49,6 +51,8 @@ export const TextPop28px600Dark = styled(TextPop16px500Grey)`
   color: #292930;
 `;
 
+// DM SANS
+
 export const TextSans96px700 = styled.h1`
   font-family: "DM Sans", sans-serif;
   font-size: 96px;
@@ -78,6 +82,12 @@ export const TextSans24px500Grey = styled(TextSans64px500Dark)`
 
 export const TextSans24px500White = styled(TextSans24px500Grey)`
   color: #fff;
+`;
+
+export const TextSans20px500White = styled(TextSans24px500Grey)`color: #FFF;
+font-size: 20px;
+font-weight: 700;
+line-height: 20px;
 `;
 
 // BUTTONS
