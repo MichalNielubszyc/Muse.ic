@@ -247,8 +247,13 @@ export const AlbumCover = styled.div`
   margin: 0; 
   padding: 0;
   border-radius: 20px;
-  width: 242px;
+  width: 240px;
+  height: 240px;
 `
 export const AlbumEssentials = styled(SingleAlbumContainer)`
   gap: 10px;
+`
+export const AlbumsCarousel = styled.div`
+  display: flex;
+  gap: 130px;
 `

@@ -19,17 +19,20 @@ import {
   Arrows,
   SingleAlbumContainer,
   AlbumCover,
-  AlbumEssentials
+  AlbumEssentials,
+  AlbumsCarousel
 } from "../styled-components";
 import Image from "next/image";
 
 export const CarouselSection = (albums) => {
-  const firstAlbumUrl100px = albums.albums.results[0].artworkUrl100;
-  const slicedFirstAlbumUrl = firstAlbumUrl100px.slice(0, -13);
-  const firstAlbumUrl1000px = slicedFirstAlbumUrl + "1000x1000bb.jpg";
+
+  const getAlbumCover1000px = (url) => {
+    return url.slice(0, -13) + "1000x1000bb.jpg";
+  }
 
   return (
     <CarouselSectionContainer>
+      {console.log(albums.albums.results)}
       {/* <Image src={firstAlbumUrl1000px} alt="album" width={1000} height={1000} /> */}
       <CarouselSectionContent>
         <HeadingContainer>
@@ -66,21 +69,27 @@ export const CarouselSection = (albums) => {
               />
             </Arrows>
           </ArrowNumbersContainer>
-            <SingleAlbumContainer>
-                <AlbumCover><Image
-                src={firstAlbumUrl1000px}
-                alt="album"
-                width={242}
-                height={242}
-                className="album-cover"
-              /></AlbumCover>
-              <AlbumEssentials>
-                  <TextSans24px500White>{albums.albums.results[0].collectionName}</TextSans24px500White>
-                  <TextSans24px500Red>{albums.albums.results[0].artistName}</TextSans24px500Red>
-                  <TextPop12px500WhiteUpper>Alternative   •   {albums.albums.results[0].releaseDate.slice(0,4)}</TextPop12px500WhiteUpper>
-              </AlbumEssentials>
-              <ButtonPop16px500BlueU>Find out more</ButtonPop16px500BlueU>
-            </SingleAlbumContainer>
+          <AlbumsCarousel>
+            {albums.albums.results.map((album, index) => {
+              return (
+              <SingleAlbumContainer key={index}>
+              <AlbumCover><Image
+              src={getAlbumCover1000px(album.artworkUrl100)}
+              alt={`album-${index}`}
+              width={240}
+              height={240}
+              className="album-cover"
+            /></AlbumCover>
+            <AlbumEssentials>
+                <TextSans24px500White>{album.collectionName}</TextSans24px500White>
+                <TextSans24px500Red>{album.artistName}</TextSans24px500Red>
+                <TextPop12px500WhiteUpper>Alternative   •   {album.releaseDate.slice(0,4)}</TextPop12px500WhiteUpper>
+            </AlbumEssentials>
+            <ButtonPop16px500BlueU>Find out more</ButtonPop16px500BlueU>
+          </SingleAlbumContainer>
+              )
+            })}
+          </AlbumsCarousel>
         </CarouselContainer>
       </CarouselSectionContent>
     </CarouselSectionContainer>
