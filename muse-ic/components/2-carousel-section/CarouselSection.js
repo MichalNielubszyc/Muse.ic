@@ -28,7 +28,7 @@ import Image from "next/image";
 
 export const CarouselSection = (albums) => {
 
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(2);
 
   const extendedAlbumsArr = [albums.albums.results[5], albums.albums.results[6], ...albums.albums.results, albums.albums.results[0], albums.albums.results[1]]
 
@@ -37,11 +37,23 @@ export const CarouselSection = (albums) => {
   }
 
   const moveAlbumsLeft = () => {
-    setCounter(counter+1);
+    if (counter === 0){
+      setCounter(6)
+    }else if(counter === 8){
+      setCounter(0)
+    }else{
+      setCounter(counter+1);
+    }
   }
 
   const moveAlbumsRight = () => {
-    setCounter(counter-1);
+    if (counter === 0){
+      setCounter(8)
+    }else if(counter === 8){
+      setCounter(2)
+    }else{
+      setCounter(counter-1);
+    }
   }
 
   return (
@@ -90,7 +102,7 @@ export const CarouselSection = (albums) => {
           <AlbumsCarousel>
             {extendedAlbumsArr.map((album, index) => {
               return (
-              <SingleAlbumContainer key={index} style={{transform: `translateX(${counter*(-450)}px)`}}>
+              <SingleAlbumContainer key={index} style={{transform: `translateX(${counter*(-450)}px)`, transition: "transform 0.4s ease-in-out"}}>
               <AlbumCover><Image
               src={getAlbumCover1000px(album.artworkUrl100)}
               alt={`album-${index}`}

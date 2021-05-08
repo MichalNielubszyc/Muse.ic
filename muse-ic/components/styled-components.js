@@ -245,7 +245,6 @@ export const SingleAlbumContainer = styled.div`
     gap: 20px;
     width: 320px;
     cursor: pointer;
-    transition: transform 0.4s ease-in-out;
 `
 export const AlbumCover = styled.div`
   box-shadow: 0px 15px 40px 22px rgba(0,0,0,0.54);
