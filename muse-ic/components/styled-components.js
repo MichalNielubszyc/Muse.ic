@@ -341,7 +341,7 @@ export const FooterRow = styled.div`
     display: flex;
     justify-content: space-between;
 `
-export const BackToTop = styled(FooterRow)`
+export const BackToTopCont = styled(FooterRow)`
     width: 110px;
     margin: 0;
     align-items: center;
