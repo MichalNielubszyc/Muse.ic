@@ -4,13 +4,14 @@ import styled from "styled-components";
 
 export const SectionContainer = styled.div`
   min-height: 100vh;
-  @import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins&display=swap");
+  import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins&display=swap");
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
   background: #fff;
 `;
-
+// @import "~slick-carousel/slick/slick.css"; 
+//   @import "~slick-carousel/slick/slick-theme.css";
 export const SectionContent = styled.div`
   padding: 50px 100px 100px;
 `;
