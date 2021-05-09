@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 import { HeroSection } from "../components/1-hero-section/HeroSection";
 import { CarouselSection } from "../components/2-carousel-section/CarouselSection";
 import { SignUpSection } from "../components/3-sing-up-section/SingUpSection";
+import { Footer } from "../components/5-footer-section/Footer"
 
 export async function getStaticProps() {
   const url = `https://itunes.apple.com/search?term=arctic+monkeys&entity=album&limit=7`
@@ -33,6 +34,7 @@ export default function Home({ fetchedAlbums }) {
       <HeroSection />
       <CarouselSection albums={ fetchedAlbums } />
       <SignUpSection />
+      <Footer />
     </>
   );
 }
