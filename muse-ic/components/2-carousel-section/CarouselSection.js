@@ -62,7 +62,7 @@ export const CarouselSection = (albums) => {
     infinite: true,
     lazyLoad: true,
     speed: 300,
-    slidesToShow: 3,
+    slidesToShow: 4,
     centerMode: true,
     centerPadding: 0,
     nextArrow: <LeftArrow />,
@@ -92,7 +92,7 @@ export const CarouselSection = (albums) => {
             </HeadingTextContainer>
           </HeadingContainer>
           <CarouselContainer>
-            <ArrowNumbersContainer>
+            {/* <ArrowNumbersContainer>
               <div />
               <div />
               <Numbers>
@@ -100,36 +100,40 @@ export const CarouselSection = (albums) => {
                 <HorLine />
                 <TextSans14px500Grey>07</TextSans14px500Grey>
               </Numbers>
-            </ArrowNumbersContainer>
-            <Slider {...settings} style={{ width: "50%", margin: "0 auto" }}>
-              {albumsArr.map((album, index) => {
-                return (
-                  <SingleAlbumContainer key={index}>
-                    <AlbumCover>
-                      <Image
-                        src={getAlbumCover1000px(album.artworkUrl100)}
-                        alt={`album-${index}`}
-                        width={240}
-                        height={240}
-                        className="album-cover"
-                      />
-                    </AlbumCover>
-                    <AlbumEssentials>
-                      <TextSans24px500White>
-                        {album.collectionName}
-                      </TextSans24px500White>
-                      <TextSans24px500Red>
-                        {album.artistName}
-                      </TextSans24px500Red>
-                      <TextPop12px500WhiteUpper>
-                        Alternative • {album.releaseDate.slice(0, 4)}
-                      </TextPop12px500WhiteUpper>
-                    </AlbumEssentials>
-                    <ButtonPop16px500BlueU>Find out more</ButtonPop16px500BlueU>
-                  </SingleAlbumContainer>
-                );
-              })}
-            </Slider>
+            </ArrowNumbersContainer> */}
+            <AlbumsCarousel>
+              <Slider {...settings} style={{ width: "100%", margin: "0" }}>
+                {albumsArr.map((album, index) => {
+                  return (
+                    <SingleAlbumContainer key={index}>
+                      <AlbumCover>
+                        <Image
+                          src={getAlbumCover1000px(album.artworkUrl100)}
+                          alt={`album-${index}`}
+                          width={240}
+                          height={240}
+                          className="album-cover"
+                        />
+                      </AlbumCover>
+                      <AlbumEssentials>
+                        <TextSans24px500White>
+                          {album.collectionName}
+                        </TextSans24px500White>
+                        <TextSans24px500Red>
+                          {album.artistName}
+                        </TextSans24px500Red>
+                        <TextPop12px500WhiteUpper>
+                          Alternative • {album.releaseDate.slice(0, 4)}
+                        </TextPop12px500WhiteUpper>
+                      </AlbumEssentials>
+                      <ButtonPop16px500BlueU>
+                        Find out more
+                      </ButtonPop16px500BlueU>
+                    </SingleAlbumContainer>
+                  );
+                })}
+              </Slider>
+            </AlbumsCarousel>
           </CarouselContainer>
         </CarouselSectionContent>
       </CarouselSectionContainer>

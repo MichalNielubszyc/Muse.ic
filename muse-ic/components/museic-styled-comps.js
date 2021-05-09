@@ -257,6 +257,7 @@ export const SingleAlbumContainer = styled.div`
   gap: 20px;
   width: 320px;
   cursor: pointer;
+  margin-right: 208px;
 `;
 export const AlbumCover = styled.div`
   box-shadow: 0px 15px 40px 22px rgba(0, 0, 0, 0.54);
@@ -270,8 +271,8 @@ export const AlbumEssentials = styled(SingleAlbumContainer)`
   gap: 10px;
 `;
 export const AlbumsCarousel = styled.div`
-  display: flex;
-  gap: 130px;
+  width: 1630px;
+  margin-left: 60px;
 `;
 export const ButtonContainer = styled.button`
   margin: 0;
