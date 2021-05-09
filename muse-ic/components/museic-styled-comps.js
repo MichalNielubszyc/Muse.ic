@@ -132,20 +132,20 @@ export const ButtonPop16px500DarkU = styled(ButtonPop16px500GreyU)`
   &:hover {
     border-bottom: none;
     color: #999fae;
-  `
-  export const ButtonPop14px500Grey = styled(ButtonPop16px500GreyU)`
+  `;
+export const ButtonPop14px500Grey = styled(ButtonPop16px500GreyU)`
   font-size: 14px;
   color: #999fae;
   border-bottom: none;
   &:hover {
     border-bottom: none;
-  `
+  `;
 export const ButtonPop16px500BlueU = styled(ButtonPop16px500GreyU)`
-  color: #5956E9;
-  border-bottom: 2px solid #27272E;
+  color: #5956e9;
+  border-bottom: 2px solid #27272e;
   width: 112px;
   &:hover {
-    border-bottom: 2px solid #5956E9;
+    border-bottom: 2px solid #5956e9;
   }
 `;
 export const ButtonPop16px500BlueBR = styled.a`
@@ -196,7 +196,7 @@ export const HorLine = styled.div`
   border-bottom: 1px solid;
   width: 40px;
   align-self: center;
-  color: #FFF
+  color: #fff;
 `;
 
 // CAROUSEL SECTION
@@ -236,9 +236,11 @@ export const ArrowNumbersContainer = styled(HeadingContainer)`
   justify-content: space-between;
   padding: 0 0 50px 200px;
   z-index: 10;
-  background-image : linear-gradient(to left, 
-    rgba(39,39,46, 0), 
-    rgba(39,39,46, 1) 35%);
+  background-image: linear-gradient(
+    to left,
+    rgba(39, 39, 46, 0),
+    rgba(39, 39, 46, 1) 35%
+  );
 `;
 export const Numbers = styled(HeadingContainer)`
   gap: 30px;
@@ -249,35 +251,35 @@ export const Arrows = styled(HeadingContainer)`
   width: 270px;
 `;
 export const SingleAlbumContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 320px;
-    cursor: pointer;
-`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 320px;
+  cursor: pointer;
+`;
 export const AlbumCover = styled.div`
-  box-shadow: 0px 15px 40px 22px rgba(0,0,0,0.54);
-  margin: 0; 
+  box-shadow: 0px 15px 40px 22px rgba(0, 0, 0, 0.54);
+  margin: 0;
   padding: 0;
   border-radius: 20px;
   width: 240px;
   height: 240px;
-`
+`;
 export const AlbumEssentials = styled(SingleAlbumContainer)`
   gap: 10px;
-`
+`;
 export const AlbumsCarousel = styled.div`
   display: flex;
   gap: 130px;
-`
+`;
 export const ButtonContainer = styled.button`
   margin: 0;
   padding: 0;
   border: none;
   cursor: pointer;
   text-decoration: none;
-  background: #27272E;
-`
+  background: #27272e;
+`;
 
 // HERO SECTION
 
@@ -292,13 +294,13 @@ export const FlexRowContainer = styled.div`
   align-items: center;
 `;
 export const TextContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 381px;
-    margin-left: 52px;
-    height: 765px;
-    gap: 35px
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 381px;
+  margin-left: 52px;
+  height: 765px;
+  gap: 35px;
 `;
 export const ImageRelativePlus = styled.div`
   z-index: 10;
@@ -311,22 +313,35 @@ export const ImageAbsolutePlus = styled.div`
   left: 20px;
 `;
 
+// NAVBAR
+
+export const NavBarContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+export const MenuContainer = styled.div`
+  display: flex;
+  gap: 66px;
+  align-items: center;
+`;
+
 // FOOTER
 
 export const FooterContainer = styled(SectionContainer)`
-    min-height: 0px;
-    padding-bottom: 42px;
-`
+  min-height: 0px;
+  padding-bottom: 42px;
+`;
 export const FooterContent = styled(SectionContent)`
-    display: flex;
-    padding: 86px 200px 45px;
-`
+  display: flex;
+  padding: 86px 200px 45px;
+`;
 export const FooterColumn = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 270px;
-    gap: 20px;
-`
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  gap: 20px;
+`;
 export const HorLine100 = styled.div`
   display: flex;
   flex-direction: row;
@@ -334,15 +349,50 @@ export const HorLine100 = styled.div`
   margin: 30px 200px 38px 200px;
   width: calc(100%-400px);
   align-self: center;
-  color: #E3E6E9;
+  color: #e3e6e9;
 `;
 export const FooterRow = styled.div`
-    margin: 0 200px;
-    display: flex;
-    justify-content: space-between;
-`
+  margin: 0 200px;
+  display: flex;
+  justify-content: space-between;
+`;
 export const BackToTopCont = styled(FooterRow)`
-    width: 110px;
-    margin: 0;
-    align-items: center;
-`
+  width: 110px;
+  margin: 0;
+  align-items: center;
+`;
+
+// SINGUP SECTION
+
+export const SingUpSectionContent = styled(SectionContent)`
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  min-height: 100vh;
+`;
+export const CardsContainer = styled.div`
+  display: flex;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+`;
+export const WhiteCard = styled.div`
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #e3e6e9;
+  border-radius: 40px;
+  padding: 80px;
+`;
+export const BlueCard = styled(WhiteCard)`
+  background: #5956e9;
+  border: none;
+`;
+export const CardTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;

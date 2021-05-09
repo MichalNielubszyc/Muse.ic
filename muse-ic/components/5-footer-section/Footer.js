@@ -9,15 +9,16 @@ import {
   FooterRow,
   BackToTopCont,
   ButtonPop14px500Grey,
-} from "../styled-components";
+} from "../museic-styled-comps";
 import { Logo } from "../utils/Logo";
 import Image from "next/image";
 
-const scrollToTop = () =>{
+const scrollToTop = () => {
   window.scrollTo({
-    top: 0, 
-    behavior: 'smooth'
-  })};
+    top: 0,
+    behavior: "smooth",
+  });
+};
 
 export const Footer = () => {
   return (
@@ -49,10 +50,10 @@ export const Footer = () => {
       <HorLine100 />
       <FooterRow>
         <TextSans14px500Grey>© 2021, Lorem ipsum inc.</TextSans14px500Grey>
-          <BackToTopCont onClick={scrollToTop}>
-            <Image src="/scroll3.jpg" alt="arowright" width={22} height={22} />
-            <ButtonPop14px500Grey>Back to top</ButtonPop14px500Grey>
-          </BackToTopCont>
+        <BackToTopCont onClick={scrollToTop}>
+          <Image src="/scroll3.jpg" alt="arowright" width={22} height={22} />
+          <ButtonPop14px500Grey>Back to top</ButtonPop14px500Grey>
+        </BackToTopCont>
       </FooterRow>
     </FooterContainer>
   );

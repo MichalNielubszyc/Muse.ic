@@ -24,7 +24,7 @@ import {
   AlbumEssentials,
   AlbumsCarousel,
   ButtonContainer,
-} from "../styled-components";
+} from "../museic-styled-comps";
 import Image from "next/image";
 
 export const CarouselSection = (albums) => {

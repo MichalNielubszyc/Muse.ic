@@ -1,4 +1,4 @@
-import { SectionContainer, SectionContent } from "../styled-components";
+import { SectionContainer, SectionContent } from "../museic-styled-comps";
 import { HeroHeader } from "./HeroHeader";
 import { NavBar } from "./NavBar";
 import Image from "next/image";

@@ -10,7 +10,7 @@ import {
   TextContainer,
   ImageRelativePlus,
   ImageAbsolutePlus,
-} from "../styled-components";
+} from "../museic-styled-comps";
 
 export const HeroHeader = () => {
   return (
@@ -35,7 +35,9 @@ export const HeroHeader = () => {
         </FlexRowContainer>
         <FlexRowContainer>
           <Image src="/scroll3.jpg" alt="arowright" width={22} height={22} />
-          <TextPop16px400Grey style={{ marginLeft: "16px" }}>Scroll to explore</TextPop16px400Grey>
+          <TextPop16px400Grey style={{ marginLeft: "16px" }}>
+            Scroll to explore
+          </TextPop16px400Grey>
         </FlexRowContainer>
       </TextContainer>
       <ImageRelativePlus>
