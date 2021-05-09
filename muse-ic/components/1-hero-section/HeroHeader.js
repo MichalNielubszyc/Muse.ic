@@ -20,7 +20,7 @@ export const HeroHeader = () => {
       </FlexRowContainer>
       <TextContainer>
         <TextSans96px700>
-          Listen Like Never Before<span style={{ color: "#5956E9" }}>.</span>
+          Listen Like Never Before<span style={{ color: "#5956E9"}}>.</span>
         </TextSans96px700>
         <TextPop18px400Grey>
           We offer music in 100x better quality than our competitors. Say good
@@ -47,15 +47,15 @@ export const HeroHeader = () => {
           width={690}
           height={769}
         />
-        <ImageAbsolutePlus>
-          <Image
-            src="/Circle 7.png"
-            alt="yellow circle"
-            width={128}
-            height={128}
-          />
-        </ImageAbsolutePlus>
       </ImageRelativePlus>
+      <ImageAbsolutePlus>
+        <Image
+          src="/Circle 7.png"
+          alt="yellow circle"
+          width={128}
+          height={128}
+        />
+      </ImageAbsolutePlus>
     </HeroContainer>
   );
 };

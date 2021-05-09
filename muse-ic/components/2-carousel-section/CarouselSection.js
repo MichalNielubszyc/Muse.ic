@@ -81,7 +81,6 @@ export const CarouselSection = (albums) => {
   const [albumIndex, setAlbumIndex] = useState(0)
 
   return (
-    <>
       <CarouselSectionContainer>
         <CarouselSectionContent>
           <HeadingContainer>
@@ -138,6 +137,5 @@ export const CarouselSection = (albums) => {
           </AlbumsCarousel>
         </CarouselSectionContent>
       </CarouselSectionContainer>
-    </>
   );
 };

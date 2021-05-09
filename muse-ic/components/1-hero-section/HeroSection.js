@@ -1,15 +1,12 @@
-import { SectionContainer, SectionContent } from "../museic-styled-comps";
+import {
+  SectionContainer,
+  SectionContent,
+  ImageAbsolute,
+} from "../museic-styled-comps";
 import { HeroHeader } from "./HeroHeader";
 import { NavBar } from "./NavBar";
 import Image from "next/image";
 import styled from "styled-components";
-
-const ImageAbsolute = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  zindex: -10;
-`;
 
 export const HeroSection = () => {
   return (

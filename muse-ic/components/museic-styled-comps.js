@@ -207,11 +207,13 @@ export const CarouselSectionContainer = styled(SectionContainer)`
   background: #27272e;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 `;
 export const CarouselSectionContent = styled(SectionContent)`
   padding: 150px 0 130px;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 `;
 export const HeadingContainer = styled.div`
   display: flex;
@@ -232,6 +234,7 @@ export const AlbumsCarousel = styled.div`
   margin-left: 60px;
   position: relative;
   margin-top: 45px;
+  z-index: 100;
 `;
 export const CoverCarouselContainer = styled(HeadingContainer)`
   height: 100%;
@@ -241,7 +244,7 @@ export const CoverCarouselContainer = styled(HeadingContainer)`
   left: 0;
   flex-direction: column;
   justify-content: center;
-  z-index: 8;
+  z-index: 14;
   background-image: linear-gradient(
     to left,
     rgba(39, 39, 46, 0),
@@ -277,14 +280,14 @@ export const RightArrowContainer = styled.div`
     top: 350px;
     left: 200px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 14;
 `
 export const LeftArrowContainer = styled.div`
     position: absolute;
     top: 350px;
     left: 140px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 14;
 `
 
 // HERO SECTION
@@ -313,10 +316,16 @@ export const ImageRelativePlus = styled.div`
   position: relative;
 `;
 export const ImageAbsolutePlus = styled.div`
-  z-index: -5;
+  z-index: 1;
   position: absolute;
-  top: 70px;
-  left: 20px;
+  top: 200px;
+  left: 580px;
+`;
+export const ImageAbsolute = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 8;
 `;
 
 // NAVBAR

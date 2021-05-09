@@ -5,6 +5,7 @@ import { CarouselSection } from "../components/2-carousel-section/CarouselSectio
 import { SignUpSection } from "../components/3-sing-up-section/SingUpSection";
 import { Footer } from "../components/5-footer-section/Footer";
 
+
 export async function getStaticProps() {
   const url = `https://itunes.apple.com/search?term=arctic+monkeys&entity=album&limit=7`;
   const result = await fetch(url);
@@ -35,7 +36,7 @@ export default function Home({ fetchedAlbums }) {
         <link
           rel="stylesheet"
           type="text/css"
-          charset="UTF-8"
+          charSet="UTF-8"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
         />
         <link
