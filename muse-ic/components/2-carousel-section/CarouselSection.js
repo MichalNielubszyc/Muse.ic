@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useInterval } from "../utils/UseInterval"
 import {
   TextSans20px500White,
   TextSans80px500White,
@@ -57,6 +58,16 @@ export const CarouselSection = (albums) => {
     }
   };
 
+// const albumSwitcher = setInterval(moveAlbumsLeft, [10000])
+
+// useEffect(() => {
+//   albumSwitcher()
+// }, [])
+
+// useInterval(() => {
+//   moveAlbumsLeft()
+// }, 1000);
+
   return (
     <CarouselSectionContainer>
       <CarouselSectionContent>
@@ -74,8 +85,19 @@ export const CarouselSection = (albums) => {
         </HeadingContainer>
         <CarouselContainer>
           <ArrowNumbersContainer>
+            <div /><div />
             <Numbers>
-              <TextSans14px500White>{`0${counter + 1}`}</TextSans14px500White>
+            {counter === 0 && <TextSans14px500White>06</TextSans14px500White>}
+            {counter === 1 && <TextSans14px500White>07</TextSans14px500White>}
+            {counter === 2 && <TextSans14px500White>01</TextSans14px500White>}
+            {counter === 3 && <TextSans14px500White>02</TextSans14px500White>}
+            {counter === 4 && <TextSans14px500White>03</TextSans14px500White>}
+            {counter === 5 && <TextSans14px500White>04</TextSans14px500White>}
+            {counter === 6 && <TextSans14px500White>05</TextSans14px500White>}
+            {counter === 7 && <TextSans14px500White>06</TextSans14px500White>}
+            {counter === 8 && <TextSans14px500White>07</TextSans14px500White>}
+            {counter === 9 && <TextSans14px500White>01</TextSans14px500White>}
+            {counter === 10 && <TextSans14px500White>02</TextSans14px500White>}
               <HorLine />
               <TextSans14px500Grey>07</TextSans14px500Grey>
             </Numbers>
