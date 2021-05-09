@@ -1,10 +1,10 @@
 import Image from "next/image";
 import {
-  TextSans96px700,
+  TextPop,
+  TextSans,
+  Container,
   ButtonPop16px500GreyU,
-  TextPop18px400Grey,
   ButtonPop16px500WhiteBlueBR,
-  TextPop16px400Grey,
 } from "../museic-styled-comps";
 import {
   HeroContainer,
@@ -21,13 +21,12 @@ export const HeroHeader = () => {
         <Image src="/Circle4.png" alt="pink circle" width={48} height={48} />
       </FlexRowContainer>
       <TextContainer>
-        <TextSans96px700>
+        <TextSans textSize="96px" textWeight="700" textColor="#292930">
           Listen Like Never Before<span style={{ color: "#5956E9"}}>.</span>
-        </TextSans96px700>
-        <TextPop18px400Grey>
-          We offer music in 100x better quality than our competitors. Say good
-          bye to FLAC 👋
-        </TextPop18px400Grey>
+        </TextSans>
+        <TextPop textSize="18px" textWeight="400">
+          We offer music in 100x better quality than our competitors. Say good bye to FLAC 👋
+        </TextPop>
         <FlexRowContainer>
           <ButtonPop16px500WhiteBlueBR>Get started</ButtonPop16px500WhiteBlueBR>
           <Image src="/play.jpg" alt="play" width={16} height={16} />
@@ -37,9 +36,11 @@ export const HeroHeader = () => {
         </FlexRowContainer>
         <FlexRowContainer>
           <Image src="/scroll3.jpg" alt="arowright" width={22} height={22} />
-          <TextPop16px400Grey style={{ marginLeft: "16px" }}>
+          <Container contMarg="0 0 0 16px">
+          <TextPop textWeight="400">
             Scroll to explore
-          </TextPop16px400Grey>
+          </TextPop>
+          </Container>
         </FlexRowContainer>
       </TextContainer>
       <ImageRelativePlus>

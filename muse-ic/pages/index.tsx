@@ -48,7 +48,6 @@ const GlobalStyle = createGlobalStyle`
 export default function Home({ fetchedAlbums }) {
   return (
     <>
-      {console.log(fetchedAlbums)}
       <GlobalStyle />
       <Head>
         <title>Muse.ic</title>

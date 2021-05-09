@@ -1,11 +1,9 @@
 import {
+  TextSans,
+  Container,
   SectionContainer,
-  TextSans64px500Dark,
-  TextSans24px500Grey,
   ButtonPop16px500WhiteBlueBR340pxW,
   ButtonPop16px500BlueBR340pxW,
-  TextSans64px500White,
-  TextSans24px500White,
 } from "../museic-styled-comps";
 import {
   SingUpSectionContent,
@@ -21,24 +19,28 @@ export const SignUpSection = () => {
       <SingUpSectionContent>
         <CardsContainer>
           <WhiteCard>
-            <TextSans64px500Dark>30 days free trial</TextSans64px500Dark>
+            <TextSans textSize="64px" textColor="#292930">30 days free trial</TextSans>
             <CardTextContainer>
-              <TextSans24px500Grey style={{ margin: "30px 0 70px" }}>
+              <Container contMarg="30px 0 70px">
+              <TextSans textColor="#999fae">
                 You are not convinced? Alright, we get it. We will give 30 days
                 free trial then.
-              </TextSans24px500Grey>
+              </TextSans>
+              </Container>
               <ButtonPop16px500WhiteBlueBR340pxW>
                 Start 30 days trial
               </ButtonPop16px500WhiteBlueBR340pxW>
             </CardTextContainer>
           </WhiteCard>
           <BlueCard>
-            <TextSans64px500White>Go on premium now</TextSans64px500White>
+          <TextSans textSize="64px">Go on premium now</TextSans>
             <CardTextContainer>
-              <TextSans24px500White style={{ margin: "30px 0 70px" }}>
+            <Container contMarg="30px 0 70px">
+              <TextSans>
                 Ready to revolutionize your listening experience? Go on premium
                 now!
-              </TextSans24px500White>
+              </TextSans>
+              </Container>
               <ButtonPop16px500BlueBR340pxW>
                 Continue with premium
               </ButtonPop16px500BlueBR340pxW>

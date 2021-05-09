@@ -10,107 +10,33 @@ export const SectionContainer = styled.div`
   position: relative;
   background: #fff;
 `;
-// @import "~slick-carousel/slick/slick.css"; 
-//   @import "~slick-carousel/slick/slick-theme.css";
 export const SectionContent = styled.div`
   padding: 50px 100px 100px;
 `;
 
+export const Container = styled.div`
+  padding: ${props => props.contPadd || "0"};
+  margin: ${props => props.contMarg || "0"};
+  width: ${props => props.contWidth || "auto"};
+`
+
 // TEXT COMPONENTS
 
-//POPPINS
-
-export const TextPop16px500Grey = styled.p`
+export const TextPop = styled.p`
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  color: #999fae;
+  font-size: ${props => props.textSize || "16px"};
+  font-weight: ${props => props.textWeight || "500"};
+  color: ${props => props.textColor || "#999fae"};
+  text-transform: ${props => props.textTrans || "#uppercase"};
   margin: 0;
   padding: 0;
 `;
 
-export const TextPop16px400Grey = styled(TextPop16px500Grey)`
-  font-weight: 400;
-`;
-export const TextPop16px400GreyM = styled(TextPop16px400Grey)`
-  margin-bottom: 30px;
-`;
-export const TextPop16px400Dark = styled(TextPop16px400Grey)`
-  color: #292930;
-`;
-export const TextPop18px400Grey = styled(TextPop16px500Grey)`
-  font-size: 18px;
-  font-weight: 400;
-`;
-export const TextPop18px400GreyW450px = styled(TextPop18px400Grey)`
-  width: 480px;
-`;
-export const TextPop16px500Blue = styled(TextPop16px500Grey)`
-  color: #2522ba;
-`;
-export const TextPop16px500White = styled(TextPop16px500Grey)`
-  color: #fff;
-`;
-export const TextPop28px600Dark = styled(TextPop16px500Grey)`
-  font-size: 28px;
-  font-weight: 600;
-  color: #292930;
-`;
-export const TextPop12px500WhiteUpper = styled(TextPop16px500White)`
-  font-size: 12px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-`;
-
-// DM SANS
-
-export const TextSans96px700 = styled.h1`
+export const TextSans = styled.p`
   font-family: "DM Sans", sans-serif;
-  font-size: 96px;
-  font-weight: 700;
-  color: #292930;
-  line-height: 95px;
-  margin: 110px 0 0;
-`;
-export const TextSans64px500Dark = styled(TextSans96px700)`
-  font-size: 64px;
-  font-weight: 500;
-  line-height: 64px;
-  margin: 0;
-`;
-export const TextSans64px500White = styled(TextSans64px500Dark)`
-  color: #fff;
-`;
-export const TextSans24px500Grey = styled(TextSans64px500Dark)`
-  color: #999fae;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 34px;
-`;
-export const TextSans24px500White = styled(TextSans24px500Grey)`
-  color: #fff;
-`;
-export const TextSans24px500Red = styled(TextSans24px500Grey)`
-  color: #e74252;
-`;
-export const TextSans14px500White = styled(TextSans24px500White)`
-  font-size: 14px;
-`;
-
-export const TextSans14px500Grey = styled(TextSans14px500White)`
-  color: #999fae;
-`;
-
-export const TextSans20px500White = styled(TextSans24px500Grey)`
-  color: #fff;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 20px;
-  width: 154px;
-`;
-export const TextSans80px500White = styled(TextSans64px500White)`
-  font-size: 80px;
-  line-height: 80px;
+  font-size: ${props => props.textSize || "24px"};
+  font-weight: ${props => props.textWeight || "500"};
+  color: ${props => props.textColor || "#FFF"};
   margin: 0;
   padding: 0;
 `;
