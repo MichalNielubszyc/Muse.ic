@@ -203,7 +203,7 @@ export const CarouselSectionContainer = styled(SectionContainer)`
   overflow: hidden;
 `;
 export const CarouselSectionContent = styled(SectionContent)`
-  padding: 150px 0 130px 200px;
+  padding: 150px 0 130px;
   display: flex;
   flex-direction: column;
 `;
@@ -221,23 +221,28 @@ export const HeadingTextContainer = styled(HeadingContainer)`
   padding: 0;
 `;
 export const CarouselContainer = styled(HeadingContainer)`
-  gap: 135px;
+  gap: 0;
   height: 520px;
   align-items: flex-end;
 `;
 export const ArrowNumbersContainer = styled(HeadingContainer)`
-  height: 28%;
+  height: 100%;
   gap: 0;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 50px;
+  padding: 0 0 50px 200px;
   z-index: 10;
+  background-image : linear-gradient(to left, 
+    rgba(39,39,46, 0), 
+    rgba(39,39,46, 1) 35%);
 `;
 export const Numbers = styled(HeadingContainer)`
   gap: 30px;
+  width: 270px;
 `;
 export const Arrows = styled(HeadingContainer)`
   gap: 17px;
+  width: 270px;
 `;
 export const SingleAlbumContainer = styled.div`
     display: flex;
