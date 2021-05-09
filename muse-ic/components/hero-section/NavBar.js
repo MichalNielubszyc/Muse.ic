@@ -1,12 +1,13 @@
+import { IoIosArrowDown } from "react-icons/io";
 import {
   ButtonPop16px500BlueBR,
   ButtonPop16px500GreyU,
+} from "../museic-styled-comps";
+import {
   NavBarContainer,
   MenuContainer,
-} from "../museic-styled-comps";
+} from "./HeroStyledComps";
 import { Logo } from "../utils/Logo";
-
-import { IoIosArrowDown } from "react-icons/io";
 
 export const NavBar = () => {
   return (

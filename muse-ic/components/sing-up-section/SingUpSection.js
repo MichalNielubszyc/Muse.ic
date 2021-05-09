@@ -6,12 +6,14 @@ import {
   ButtonPop16px500BlueBR340pxW,
   TextSans64px500White,
   TextSans24px500White,
+} from "../museic-styled-comps";
+import {
   SingUpSectionContent,
   CardsContainer,
   WhiteCard,
   BlueCard,
   CardTextContainer,
-} from "../museic-styled-comps";
+} from "./SignUpStyledComps";
 
 export const SignUpSection = () => {
   return (

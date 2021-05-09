@@ -1,9 +1,9 @@
 import Head from "next/head";
 import { createGlobalStyle } from "styled-components";
-import { HeroSection } from "../components/1-hero-section/HeroSection";
-import { CarouselSection } from "../components/2-carousel-section/CarouselSection";
-import { SignUpSection } from "../components/3-sing-up-section/SingUpSection";
-import { Footer } from "../components/5-footer-section/Footer";
+import { HeroSection } from "../components/hero-section/HeroSection";
+import { CarouselSection } from "../components/carousel-section/CarouselSection";
+import { SignUpSection } from "../components/sing-up-section/SingUpSection";
+import { Footer } from "../components/footer-section/Footer";
 
 
 export async function getStaticProps() {

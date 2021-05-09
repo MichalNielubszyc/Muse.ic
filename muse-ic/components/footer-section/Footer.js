@@ -1,17 +1,19 @@
+import Image from "next/image";
+import {
+  TextPop16px400GreyM,
+  ButtonPop16px500DarkU,
+  TextSans14px500Grey,
+  ButtonPop14px500Grey,
+} from "../museic-styled-comps";
 import {
   FooterContainer,
   FooterContent,
   FooterColumn,
-  TextPop16px400GreyM,
-  ButtonPop16px500DarkU,
-  TextSans14px500Grey,
   HorLine100,
   FooterRow,
-  BackToTopCont,
-  ButtonPop14px500Grey,
-} from "../museic-styled-comps";
+  BackToTopCont
+} from "./FooterStyledComps";
 import { Logo } from "../utils/Logo";
-import Image from "next/image";
 
 const scrollToTop = () => {
   window.scrollTo({

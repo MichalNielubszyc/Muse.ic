@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Slider from "react-slick";
 import { useState } from "react";
 import {
   TextSans20px500White,
@@ -10,6 +12,8 @@ import {
   TextPop12px500WhiteUpper,
   ButtonPop16px500BlueU,
   HorLine,
+} from "../museic-styled-comps";
+import {
   CarouselSectionContainer,
   CarouselSectionContent,
   HeadingContainer,
@@ -22,44 +26,44 @@ import {
   AlbumsCarousel,
   RightArrowContainer,
   LeftArrowContainer,
-} from "../museic-styled-comps";
-import Image from "next/image";
-import Slider from "react-slick";
+} from "./CarouselStyledComps";
 
-export const CarouselSection = (albums) => {
+const LeftArrow = ({ onClick }) => {
+  return (
+    <LeftArrowContainer>
+      <Image
+        src="/arrowleft.jpg"
+        alt="arowright"
+        width={40}
+        height={40}
+        onClick={onClick}
+      />
+    </LeftArrowContainer>
+  );
+};
+const RightArrow = ({ onClick }) => {
+  return (
+    <RightArrowContainer>
+      <Image
+        src="/arrowright.jpg"
+        alt="arowright"
+        width={40}
+        height={40}
+        onClick={onClick}
+      />
+    </RightArrowContainer>
+  );
+};
 
-  const albumsArr = [...albums.albums.results];
+
+export const CarouselSection = ({ albums: { results } }) => {
+
+  const [albumIndex, setAlbumIndex] = useState(0);
+
+  const albumsArr = [...results];
 
   const getAlbumCover1000px = (url) => {
     return url.slice(0, -13) + "1000x1000bb.jpg";
-  };
-
-  const LeftArrow = ({ onClick }) => {
-    return (
-      <LeftArrowContainer>
-        <Image
-          src="/arrowleft.jpg"
-          alt="arowright"
-          width={40}
-          height={40}
-          onClick={onClick}
-        />
-      </LeftArrowContainer>
-    );
-  };
-
-  const RightArrow = ({ onClick }) => {
-    return (
-      <RightArrowContainer>
-        <Image
-          src="/arrowright.jpg"
-          alt="arowright"
-          width={40}
-          height={40}
-          onClick={onClick}
-        />
-      </RightArrowContainer>
-    );
   };
 
   const settings = {
@@ -76,9 +80,8 @@ export const CarouselSection = (albums) => {
     pauseOnFocus: true,
     pauseOnHover: true,
     beforeChange: (current) => setAlbumIndex(current),
+    initialSlide: 1
   };
-
-  const [albumIndex, setAlbumIndex] = useState(0)
 
   return (
       <CarouselSectionContainer>

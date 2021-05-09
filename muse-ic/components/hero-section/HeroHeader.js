@@ -5,18 +5,20 @@ import {
   TextPop18px400Grey,
   ButtonPop16px500WhiteBlueBR,
   TextPop16px400Grey,
+} from "../museic-styled-comps";
+import {
   HeroContainer,
   FlexRowContainer,
   TextContainer,
   ImageRelativePlus,
   ImageAbsolutePlus,
-} from "../museic-styled-comps";
+} from "./HeroStyledComps";
 
 export const HeroHeader = () => {
   return (
     <HeroContainer>
       <FlexRowContainer>
-        <Image src="/Circle 4.png" alt="pink circle" width={48} height={48} />
+        <Image src="/Circle4.png" alt="pink circle" width={48} height={48} />
       </FlexRowContainer>
       <TextContainer>
         <TextSans96px700>
@@ -42,7 +44,7 @@ export const HeroHeader = () => {
       </TextContainer>
       <ImageRelativePlus>
         <Image
-          src="/Hero image.png"
+          src="/HeroImage.png"
           alt="pink circle"
           width={690}
           height={769}
@@ -50,7 +52,7 @@ export const HeroHeader = () => {
       </ImageRelativePlus>
       <ImageAbsolutePlus>
         <Image
-          src="/Circle 7.png"
+          src="/Circle7.png"
           alt="yellow circle"
           width={128}
           height={128}

@@ -1,15 +1,5 @@
-import styled from "styled-components";
 import Image from "next/image";
-import { TextPop28px600Dark } from "../museic-styled-comps";
-
-const LogoContainer = styled.a`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 29px;
-  gap: 13px;
-  cursor: pointer;
-`;
+import { TextPop28px600Dark, LogoContainer } from "../museic-styled-comps";
 
 export const Logo = () => {
   return (

@@ -1,12 +1,14 @@
+import Image from "next/image";
 import {
   SectionContainer,
   SectionContent,
-  ImageAbsolute,
 } from "../museic-styled-comps";
+import {
+  ImageAbsolute,
+} from "./HeroStyledComps";
 import { HeroHeader } from "./HeroHeader";
 import { NavBar } from "./NavBar";
-import Image from "next/image";
-import styled from "styled-components";
+
 
 export const HeroSection = () => {
   return (
@@ -16,7 +18,7 @@ export const HeroSection = () => {
         <HeroHeader />
       </SectionContent>
       <ImageAbsolute>
-        <Image src="/Circle 2.png" alt="circle2" width={610} height={1122} />
+        <Image src="/Circle2.png" alt="circle2" width={610} height={1122} />
       </ImageAbsolute>
     </SectionContainer>
   );
