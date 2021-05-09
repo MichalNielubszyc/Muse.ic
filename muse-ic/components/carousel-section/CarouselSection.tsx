@@ -55,12 +55,15 @@ const RightArrow = ({ onClick }) => {
   );
 };
 
+import type { albumObject } from "../utils/albumObject"
+
+type albumsArrayType = albumObject[]
 
 export const CarouselSection = ({ albums: { results } }) => {
 
   const [albumIndex, setAlbumIndex] = useState(0);
 
-  const albumsArr = [...results];
+  const albumsArr: albumsArrayType = [...results];
 
   const getAlbumCover1000px = (url) => {
     return url.slice(0, -13) + "1000x1000bb.jpg";
@@ -73,7 +76,7 @@ export const CarouselSection = ({ albums: { results } }) => {
     slidesToShow: 4,
     centerMode: true,
     centerPadding: 0,
-    nextArrow: <LeftArrow style={{ position: "absolute", top: "0" }} />,
+    nextArrow: <LeftArrow  />,
     prevArrow: <RightArrow />,
     autoplay: true,
     autoplaySpeed: 10000,

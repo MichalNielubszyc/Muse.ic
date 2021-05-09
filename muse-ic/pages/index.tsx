@@ -5,13 +5,20 @@ import { CarouselSection } from "../components/carousel-section/CarouselSection"
 import { SignUpSection } from "../components/sing-up-section/SingUpSection";
 import { Footer } from "../components/footer-section/Footer";
 
+import type { albumObject } from "../components/utils/albumObject"
+
+type resultsObject = {
+  resultCount: number;
+  results: albumObject[]
+}
 
 export async function getStaticProps() {
-  const url = `https://itunes.apple.com/search?term=arctic+monkeys&entity=album&limit=7`;
+  const url: string = `https://itunes.apple.com/search?term=arctic+monkeys&entity=album&limit=7`;
   const result = await fetch(url);
+  let fetchedAlbums: resultsObject;
   return {
     props: {
-      fetchedAlbums: await result.json(),
+      fetchedAlbums: await result.json() as resultsObject,
     },
   };
 }
@@ -41,6 +48,7 @@ const GlobalStyle = createGlobalStyle`
 export default function Home({ fetchedAlbums }) {
   return (
     <>
+      {console.log(fetchedAlbums)}
       <GlobalStyle />
       <Head>
         <title>Muse.ic</title>
