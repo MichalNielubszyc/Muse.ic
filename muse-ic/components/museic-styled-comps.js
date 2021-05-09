@@ -59,6 +59,7 @@ export const TextPop28px600Dark = styled(TextPop16px500Grey)`
 export const TextPop12px500WhiteUpper = styled(TextPop16px500White)`
   font-size: 12px;
   text-transform: uppercase;
+  margin-bottom: 20px;
 `;
 
 // DM SANS
@@ -224,19 +225,23 @@ export const HeadingTextContainer = styled(HeadingContainer)`
   width: 772px;
   margin: 0;
   padding: 0;
+`
+export const AlbumsCarousel = styled.div`
+  height: 434px;
+  width: 1630px;
+  margin-left: 60px;
+  position: relative;
+  margin-top: 45px;
 `;
-export const CarouselContainer = styled(HeadingContainer)`
-  gap: 0;
-  height: 520px;
-  align-items: flex-end;
-`;
-export const ArrowNumbersContainer = styled(HeadingContainer)`
+export const CoverCarouselContainer = styled(HeadingContainer)`
   height: 100%;
-  gap: 0;
+  width: 440px;
+  position: absolute;
+  top: 0;
+  left: 0;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 0 0 50px 200px;
-  z-index: 10;
+  justify-content: center;
+  z-index: 8;
   background-image: linear-gradient(
     to left,
     rgba(39, 39, 46, 0),
@@ -245,23 +250,20 @@ export const ArrowNumbersContainer = styled(HeadingContainer)`
 `;
 export const Numbers = styled(HeadingContainer)`
   gap: 30px;
+  margin-top: 100px;
   width: 270px;
-`;
-export const Arrows = styled(HeadingContainer)`
-  gap: 17px;
-  width: 270px;
+  margin-left: 140px;
 `;
 export const SingleAlbumContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
   width: 320px;
   cursor: pointer;
   margin-right: 208px;
 `;
 export const AlbumCover = styled.div`
-  box-shadow: 0px 15px 40px 22px rgba(0, 0, 0, 0.54);
-  margin: 0;
+  box-shadow: 0px 24px 39px 7px rgba(0,0,0,0.51);
+  margin: 0 0 20px;
   padding: 0;
   border-radius: 20px;
   width: 240px;
@@ -270,18 +272,20 @@ export const AlbumCover = styled.div`
 export const AlbumEssentials = styled(SingleAlbumContainer)`
   gap: 10px;
 `;
-export const AlbumsCarousel = styled.div`
-  width: 1630px;
-  margin-left: 60px;
-`;
-export const ButtonContainer = styled.button`
-  margin: 0;
-  padding: 0;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  background: #27272e;
-`;
+export const RightArrowContainer = styled.div`
+    position: absolute;
+    top: 350px;
+    left: 200px;
+    cursor: pointer;
+    z-index: 10;
+`
+export const LeftArrowContainer = styled.div`
+    position: absolute;
+    top: 350px;
+    left: 140px;
+    cursor: pointer;
+    z-index: 10;
+`
 
 // HERO SECTION
 
