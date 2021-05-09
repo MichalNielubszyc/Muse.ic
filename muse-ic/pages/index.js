@@ -24,6 +24,18 @@ const GlobalStyle = createGlobalStyle`
   background: #000;
   }
   .album-cover { border-radius: 20px; }
+  body::-webkit-scrollbar {
+    width: 1em;
+  }
+   
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+  }
 `;
 
 export default function Home({ fetchedAlbums }) {
