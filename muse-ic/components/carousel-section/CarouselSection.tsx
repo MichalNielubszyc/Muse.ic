@@ -95,11 +95,12 @@ export const CarouselSection = ({ albums: { results } }) => {
         <AlbumsCarousel>
           <CoverCarouselContainer>
             <Numbers>
-              <TextSans textSize="14px">{`0${
-                albumIndex + 1
-              }`}</TextSans>
+              <TextSans textSize="14px">{`0${albumIndex + 1}`}</TextSans>
               <HorLine />
-              <TextSans textSize="14px" textColor="#999fae">{`0${albumsArr.length}`}</TextSans>
+              <TextSans
+                textSize="14px"
+                textColor="#999fae"
+              >{`0${albumsArr.length}`}</TextSans>
             </Numbers>
           </CoverCarouselContainer>
           <Slider {...settings} style={{ width: "100%", margin: "0" }}>
@@ -116,9 +117,7 @@ export const CarouselSection = ({ albums: { results } }) => {
                     />
                   </AlbumCover>
                   <AlbumEssentials>
-                    <TextSans>
-                      {album.collectionName}
-                    </TextSans>
+                    <TextSans>{album.collectionName}</TextSans>
                     <TextSans textColor="#e74252">{album.artistName}</TextSans>
                     <TextPop textSize="14px" textTrans="uppercase">
                       Alternative • {album.releaseDate.slice(0, 4)}

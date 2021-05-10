@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { SectionContent } from "../museic-styled-comps"
+import { SectionContent } from "../museic-styled-comps";
 
 export const SingUpSectionContent = styled(SectionContent)`
-  padding: 100px;
+  padding: 0px;
   display: flex;
   justify-content: center;
   align-items: center;

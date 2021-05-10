@@ -22,10 +22,11 @@ export const HeroHeader = () => {
       </FlexRowContainer>
       <TextContainer>
         <TextSans textSize="96px" textWeight="700" textColor="#292930">
-          Listen Like Never Before<span style={{ color: "#5956E9"}}>.</span>
+          Listen Like Never Before<span style={{ color: "#5956E9" }}>.</span>
         </TextSans>
         <TextPop textSize="18px" textWeight="400">
-          We offer music in 100x better quality than our competitors. Say good bye to FLAC 👋
+          We offer music in 100x better quality than our competitors. Say good
+          bye to FLAC 👋
         </TextPop>
         <FlexRowContainer>
           <ButtonPop16px500WhiteBlueBR>Get started</ButtonPop16px500WhiteBlueBR>
@@ -37,9 +38,7 @@ export const HeroHeader = () => {
         <FlexRowContainer>
           <Image src="/scroll3.jpg" alt="arowright" width={22} height={22} />
           <Container contMarg="0 0 0 16px">
-          <TextPop textWeight="400">
-            Scroll to explore
-          </TextPop>
+            <TextPop textWeight="400">Scroll to explore</TextPop>
           </Container>
         </FlexRowContainer>
       </TextContainer>

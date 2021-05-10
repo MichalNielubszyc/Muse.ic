@@ -3,10 +3,7 @@ import {
   ButtonPop16px500BlueBR,
   ButtonPop16px500GreyU,
 } from "../museic-styled-comps";
-import {
-  NavBarContainer,
-  MenuContainer,
-} from "./HeroStyledComps";
+import { NavBarContainer, MenuContainer } from "./HeroStyledComps";
 import { Logo } from "../utils/Logo";
 
 export const NavBar = () => {

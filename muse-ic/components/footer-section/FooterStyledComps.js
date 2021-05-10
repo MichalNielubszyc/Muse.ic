@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SectionContainer, SectionContent } from "../museic-styled-comps"
+import { SectionContainer, SectionContent } from "../museic-styled-comps";
 
 export const FooterContainer = styled(SectionContainer)`
   min-height: 0px;

@@ -15,28 +15,28 @@ export const SectionContent = styled.div`
 `;
 
 export const Container = styled.div`
-  padding: ${props => props.contPadd || "0"};
-  margin: ${props => props.contMarg || "0"};
-  width: ${props => props.contWidth || "auto"};
-`
+  padding: ${(props) => props.contPadd || "0"};
+  margin: ${(props) => props.contMarg || "0"};
+  width: ${(props) => props.contWidth || "auto"};
+`;
 
 // TEXT COMPONENTS
 
 export const TextPop = styled.p`
   font-family: "Poppins", sans-serif;
-  font-size: ${props => props.textSize || "16px"};
-  font-weight: ${props => props.textWeight || "500"};
-  color: ${props => props.textColor || "#999fae"};
-  text-transform: ${props => props.textTrans || "#uppercase"};
+  font-size: ${(props) => props.textSize || "16px"};
+  font-weight: ${(props) => props.textWeight || "500"};
+  color: ${(props) => props.textColor || "#999fae"};
+  text-transform: ${(props) => props.textTrans || "#uppercase"};
   margin: 0;
   padding: 0;
 `;
 
 export const TextSans = styled.p`
   font-family: "DM Sans", sans-serif;
-  font-size: ${props => props.textSize || "24px"};
-  font-weight: ${props => props.textWeight || "500"};
-  color: ${props => props.textColor || "#FFF"};
+  font-size: ${(props) => props.textSize || "24px"};
+  font-weight: ${(props) => props.textWeight || "500"};
+  color: ${(props) => props.textColor || "#FFF"};
   margin: 0;
   padding: 0;
 `;

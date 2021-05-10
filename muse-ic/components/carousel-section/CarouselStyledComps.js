@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SectionContainer, SectionContent } from "../museic-styled-comps"
+import { SectionContainer, SectionContent } from "../museic-styled-comps";
 
 export const CarouselSectionContainer = styled(SectionContainer)`
   background: #27272e;
@@ -25,7 +25,7 @@ export const HeadingTextContainer = styled(HeadingContainer)`
   width: 772px;
   margin: 0;
   padding: 0;
-`
+`;
 export const AlbumsCarousel = styled.div`
   height: 434px;
   width: 1630px;
@@ -63,7 +63,7 @@ export const SingleAlbumContainer = styled.div`
   margin-right: 208px;
 `;
 export const AlbumCover = styled.div`
-  box-shadow: 0px 24px 39px 7px rgba(0,0,0,0.51);
+  box-shadow: 0px 24px 39px 7px rgba(0, 0, 0, 0.51);
   margin: 0 0 20px;
   padding: 0;
   border-radius: 20px;
@@ -72,18 +72,19 @@ export const AlbumCover = styled.div`
 `;
 export const AlbumEssentials = styled(SingleAlbumContainer)`
   gap: 10px;
+  margin-bottom: 20px;
 `;
 export const RightArrowContainer = styled.div`
-    position: absolute;
-    top: 350px;
-    left: 200px;
-    cursor: pointer;
-    z-index: 14;
-`
+  position: absolute;
+  top: 350px;
+  left: 200px;
+  cursor: pointer;
+  z-index: 14;
+`;
 export const LeftArrowContainer = styled.div`
-    position: absolute;
-    top: 350px;
-    left: 140px;
-    cursor: pointer;
-    z-index: 14;
-`
+  position: absolute;
+  top: 350px;
+  left: 140px;
+  cursor: pointer;
+  z-index: 14;
+`;

@@ -5,12 +5,12 @@ import { CarouselSection } from "../components/carousel-section/CarouselSection"
 import { SignUpSection } from "../components/sing-up-section/SingUpSection";
 import { Footer } from "../components/footer-section/Footer";
 
-import type { albumObject } from "../components/utils/albumObject"
+import type { albumObject } from "../components/utils/albumObject";
 
 type resultsObject = {
   resultCount: number;
-  results: albumObject[]
-}
+  results: albumObject[];
+};
 
 export async function getStaticProps() {
   const url: string = `https://itunes.apple.com/search?term=arctic+monkeys&entity=album&limit=7`;
@@ -18,7 +18,7 @@ export async function getStaticProps() {
   let fetchedAlbums: resultsObject;
   return {
     props: {
-      fetchedAlbums: await result.json() as resultsObject,
+      fetchedAlbums: (await result.json()) as resultsObject,
     },
   };
 }
@@ -34,11 +34,9 @@ const GlobalStyle = createGlobalStyle`
   body::-webkit-scrollbar {
     width: 1em;
   }
-   
   body::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
-   
   body::-webkit-scrollbar-thumb {
     background-color: darkgrey;
     outline: 1px solid slategrey;

@@ -27,7 +27,7 @@ export const ImageAbsolutePlus = styled.div`
   z-index: 1;
   position: absolute;
   top: 200px;
-  left: 580px;
+  left: 660px;
 `;
 export const ImageAbsolute = styled.div`
   position: absolute;
