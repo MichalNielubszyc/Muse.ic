@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 import { HeroSection } from "../components/hero-section/HeroSection";
 import { CarouselSection } from "../components/carousel-section/CarouselSection";
 import { SignUpSection } from "../components/sing-up-section/SingUpSection";
+import { BandsSection } from "../components/bands-section/BandsSection"
 import { Footer } from "../components/footer-section/Footer";
 
 import type { AlbumObject } from "../components/utils/AlbumObject";
@@ -65,6 +66,7 @@ export default function Home({ fetchedAlbums }) {
       <HeroSection />
       <CarouselSection albums={fetchedAlbums} />
       <SignUpSection />
+      <BandsSection />
       <Footer />
     </>
   );

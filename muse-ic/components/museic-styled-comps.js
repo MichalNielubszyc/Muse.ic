@@ -151,3 +151,21 @@ export const ImageAbsoluteLine = styled.div`
   top: 260px;
   left: 90px;
 `;
+export const ImageAbsoluteLine2 = styled.div`
+  z-index: 1;
+  position: absolute;
+  top: 260px;
+  left: -150px;
+`;
+export const ImageAbsoluteMediumCircle = styled.div`
+  z-index: 10;
+  position: absolute;
+  top: 500px;
+  left: 120px;
+`;
+export const ImageAbsoluteBigCircle = styled.div`
+  z-index: 1;
+  position: absolute;
+  top: 60px;
+  right: 120px;
+`;

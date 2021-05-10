@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { SectionContent } from "../museic-styled-comps";
 
 export const SingUpSectionContent = styled(SectionContent)`
-  padding: 50px;
+  padding: 30px;
   display: flex;
   justify-content: center;
   align-items: center;

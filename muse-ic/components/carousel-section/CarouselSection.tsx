@@ -81,7 +81,7 @@ export const CarouselSection = ({ albums: { results } }) => {
         <Image src="/GreyLineShort.png" alt="grey line" width={350} height={350} />
       </ImageAbsoluteLine>
       <ImageAbsoluteSmallCircle>
-        <Image src="/SmallGreyCircle.png" alt="grey line" width={40} height={40} />
+        <Image src="/SmallGreyCircle.png" alt="grey circle" width={40} height={40} />
       </ImageAbsoluteSmallCircle>
       <CarouselSectionContent>
         <HeadingContainer>
