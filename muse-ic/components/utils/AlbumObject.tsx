@@ -1,4 +1,4 @@
-export type albumObject = {
+export type AlbumObject = {
   amgArtistId: number;
   artistId: number;
   artistName: string;

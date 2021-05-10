@@ -8,6 +8,9 @@ import {
   Container,
   ButtonPop16px500BlueU,
   HorLine,
+  ImageAbsoluteRing,
+  ImageAbsoluteSmallCircle,
+  ImageAbsoluteLine,
 } from "../museic-styled-comps";
 import {
   CarouselSectionContainer,
@@ -39,9 +42,9 @@ const RightArrow = ({ onClick }: { onClick?: MouseEventHandler<any> }) => {
   );
 };
 
-import type { albumObject } from "../utils/albumObject";
+import type { AlbumObject } from "../utils/AlbumObject";
 
-type albumsArrayType = albumObject[];
+type albumsArrayType = AlbumObject[];
 
 export const CarouselSection = ({ albums: { results } }) => {
   const [albumIndex, setAlbumIndex] = useState(0);
@@ -71,20 +74,29 @@ export const CarouselSection = ({ albums: { results } }) => {
 
   return (
     <CarouselSectionContainer>
+      <ImageAbsoluteRing>
+        <Image src="/GreyRing.png" alt="grey ring" width={520} height={520} />
+      </ImageAbsoluteRing>
+      <ImageAbsoluteLine>
+        <Image src="/GreyLineShort.png" alt="grey line" width={350} height={350} />
+      </ImageAbsoluteLine>
+      <ImageAbsoluteSmallCircle>
+        <Image src="/SmallGreyCircle.png" alt="grey line" width={40} height={40} />
+      </ImageAbsoluteSmallCircle>
       <CarouselSectionContent>
         <HeadingContainer>
-          <Container contPadd="0 0 0 200px">
+          <Container contPadd="0 0 0 200px" contZindex="2">
             <TextSans textWeight="700" textSize="20px">
               Top notch sound
             </TextSans>
           </Container>
           <HeadingTextContainer>
-            <Container contMarg="-15px 0 0">
+            <Container contMarg="-15px 0 0" contZindex="2">
               <TextSans textWeight="500" textSize="80px">
                 The world's best quality audio ever.
               </TextSans>
             </Container>
-            <Container contWidth="450px">
+            <Container contWidth="450px" contZindex="2">
               <TextPop textWeight="400" textSize="18px">
                 Over 100 years of research has led us to develop new quality,
                 which is 100x times better than FLAC.

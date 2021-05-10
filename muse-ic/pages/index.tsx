@@ -5,11 +5,11 @@ import { CarouselSection } from "../components/carousel-section/CarouselSection"
 import { SignUpSection } from "../components/sing-up-section/SingUpSection";
 import { Footer } from "../components/footer-section/Footer";
 
-import type { albumObject } from "../components/utils/albumObject";
+import type { AlbumObject } from "../components/utils/AlbumObject";
 
 type resultsObject = {
   resultCount: number;
-  results: albumObject[];
+  results: AlbumObject[];
 };
 
 export async function getStaticProps() {

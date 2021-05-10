@@ -13,11 +13,11 @@ export const SectionContainer = styled.div`
 export const SectionContent = styled.div`
   padding: 50px 100px 100px;
 `;
-
 export const Container = styled.div`
   padding: ${(props) => props.contPadd || "0"};
   margin: ${(props) => props.contMarg || "0"};
   width: ${(props) => props.contWidth || "auto"};
+  z-index: ${(props) => props.contZindex || "0"};
 `;
 
 // TEXT COMPONENTS
@@ -31,7 +31,6 @@ export const TextPop = styled.p`
   margin: 0;
   padding: 0;
 `;
-
 export const TextSans = styled.p`
   font-family: "DM Sans", sans-serif;
   font-size: ${(props) => props.textSize || "24px"};
@@ -133,4 +132,22 @@ export const LogoContainer = styled.a`
   height: 29px;
   gap: 13px;
   cursor: pointer;
+`;
+export const ImageAbsoluteRing = styled.div`
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 200px;
+`;
+export const ImageAbsoluteSmallCircle = styled.div`
+  z-index: 1;
+  position: absolute;
+  top: 70px;
+  left: 350px;
+`;
+export const ImageAbsoluteLine = styled.div`
+  z-index: 1;
+  position: absolute;
+  top: 260px;
+  left: 90px;
 `;
